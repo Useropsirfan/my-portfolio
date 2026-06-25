@@ -16,8 +16,11 @@
     --color-cyan-300: oklch(86.5% 0.127 207.078);
     --color-cyan-400: oklch(78.9% 0.154 211.53);
     --color-cyan-500: oklch(71.5% 0.143 215.221);
+    --color-cyan-900: oklch(39.8% 0.07 227.392);
+    --color-cyan-950: oklch(30.2% 0.056 229.695);
     --color-sky-300: oklch(82.8% 0.111 230.318);
     --color-sky-400: oklch(74.6% 0.16 232.661);
+    --color-blue-950: oklch(28.2% 0.091 267.935);
     --color-indigo-300: oklch(78.5% 0.115 274.713);
     --color-indigo-600: oklch(51.1% 0.262 276.966);
     --color-indigo-700: oklch(45.7% 0.24 277.023);
@@ -29,11 +32,14 @@
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-900: oklch(21% 0.034 264.665);
+    --color-gray-950: oklch(13% 0.028 261.692);
     --color-zinc-500: oklch(55.2% 0.016 285.938);
     --color-zinc-600: oklch(44.2% 0.017 285.786);
+    --color-zinc-700: oklch(37% 0.013 285.805);
     --color-zinc-800: oklch(27.4% 0.006 286.033);
     --color-zinc-900: oklch(21% 0.006 285.885);
     --color-zinc-950: oklch(14.1% 0.005 285.823);
+    --color-olive-500: oklch(58% 0.031 107.3);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -505,6 +511,10 @@
     border-top-style: var(--tw-border-style);
     border-top-width: 4px;
   }
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
   .border-b-2 {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 2px;
@@ -533,11 +543,35 @@
       border-color: color-mix(in oklab, var(--color-cyan-500) 30%, transparent);
     }
   }
+  .border-cyan-900 {
+    border-color: var(--color-cyan-900);
+  }
+  .border-gray-500 {
+    border-color: var(--color-gray-500);
+  }
+  .border-gray-900 {
+    border-color: var(--color-gray-900);
+  }
+  .border-olive-500 {
+    border-color: var(--color-olive-500);
+  }
   .border-slate-950 {
     border-color: var(--color-slate-950);
   }
+  .border-white {
+    border-color: var(--color-white);
+  }
   .border-zinc-500 {
     border-color: var(--color-zinc-500);
+  }
+  .border-zinc-700 {
+    border-color: var(--color-zinc-700);
+  }
+  .border-zinc-700\/50 {
+    border-color: color-mix(in srgb, oklch(37% 0.013 285.805) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-zinc-700) 50%, transparent);
+    }
   }
   .border-zinc-800 {
     border-color: var(--color-zinc-800);
@@ -560,11 +594,50 @@
   .border-zinc-950 {
     border-color: var(--color-zinc-950);
   }
+  .border-b-zinc-900 {
+    border-bottom-color: var(--color-zinc-900);
+  }
+  .bg-\[\#0f1\] {
+    background-color: #0f1;
+  }
+  .bg-\[\#0f172\] {
+    background-color: #0f172;
+  }
+  .bg-\[\#0f172a\] {
+    background-color: #0f172a;
+  }
+  .bg-\[\#0f\] {
+    background-color: #0f;
+  }
+  .bg-\[\#1e232b\] {
+    background-color: #1e232b;
+  }
+  .bg-\[\#00040c\] {
+    background-color: #00040c;
+  }
+  .bg-\[\#060910\] {
+    background-color: #060910;
+  }
+  .bg-\[\#\] {
+    background-color: #;
+  }
+  .bg-blue-950 {
+    background-color: var(--color-blue-950);
+  }
   .bg-cyan-500 {
     background-color: var(--color-cyan-500);
   }
+  .bg-cyan-900 {
+    background-color: var(--color-cyan-900);
+  }
+  .bg-cyan-950 {
+    background-color: var(--color-cyan-950);
+  }
   .bg-gray-900 {
     background-color: var(--color-gray-900);
+  }
+  .bg-gray-950 {
+    background-color: var(--color-gray-950);
   }
   .bg-orange-600 {
     background-color: var(--color-orange-600);
@@ -1321,6 +1394,19 @@
     @media (width >= 64rem) {
       font-size: var(--text-2xl);
       line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
+  .dark\:bg-zinc-800 {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-zinc-800);
+    }
+  }
+  .dark\:bg-zinc-800\/50 {
+    @media (prefers-color-scheme: dark) {
+      background-color: color-mix(in srgb, oklch(27.4% 0.006 286.033) 50%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--color-zinc-800) 50%, transparent);
+      }
     }
   }
 }
