@@ -13,6 +13,8 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
         rel="stylesheet">
     <title>Document</title>
+    <script src="./javascript.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <!-- style="background-image: url('../images/intro.jpeg');" -->
 
@@ -23,23 +25,27 @@
         <nav class="flex p-2 justify-between items-center md:px-8  text-shadow-white bg-transparent ">
 
             <div class=" hidden md:flex flex-nowrap justify-content items-center">
-                <span>
-                    <img src="../images/logo_1532_image.png" alt="logo"
+                <span id="logo">
+                    <img src="../images/b_all_text_in_white-removebg-preview.png" alt="logo"
                         class="w-8 h-8 md:h-16 md:w-16 overflow-hidden rounded-full mt-1 object-contain" />
-                </span>
-                <h1
-                    class="text-right sm:text-1xl md:text-lg lg:text-3xl  italic font-bold shrink-0 ml-1 mb-1 cursor-pointer  ">
-                    Irfan Bhati
-                </h1>
+                    </span>
+                    <h1 id="logoname"
+                        class="text-right sm:text-1xl md:text-lg lg:text-2xl text-slate-400 italic font-bold shrink-0 ml-1 mb-1 cursor-pointer  ">
+                        Irfan Bhati
+                    </h1>
             </div>
-            <button id="menu-button" class="md:hidden block ">
-                <span class="material-symbols-outlined text-3xl">
-                    menu
-                </span>
-            </button>
-
             <div>
-                <ul class="  hidden md:flex items-center gap-4 md:gap-8 lg:gap-16 mr-20">
+
+                <button id="menu-button" class="md:hidden  block cursor-pointer ">
+                    <span class="material-symbols-outlined  text-3xl">
+                        menu
+                    </span>
+    
+                </button>
+            </div>
+
+            <div id="navicon">
+                <ul id="mobliemenu" class="hidden md:flex items-center gap-4 md:gap-8 lg:gap-16 mr-40">
                     <li
                         class="font-semibold hover:text-indigo-300 uppercase tracking-tight hover:underline underline-offset-30 decoration-2 ">
                         <a href="#home">home</a>
@@ -62,41 +68,41 @@
                     </li>
                 </ul>
             </div>
-            <div>
+            <div id="idbtn" class="">
                 <button>
                     <img src="../images/pofile.jpeg" alt="Profile" class="w-10 h-10 rounded-full" />
                 </button>
-                </el-dropdown>
+                
             </div>
         </nav>
         <!-- nav bar is the end here -->
 
         <!-- hero section -->
         <section class="flex ">
-            <div class="h-screen ml-11 flex flex-col   justify-center">
+            <div class="h-screen pl-2 flex flex-col   justify-center">
 
                 <div class="max-w-4xl ">
 
-                    <h4 class=" text-xl font-semibold mb-4">Hi,There</h4>
-                    <h1 class="text-5xl md:text-7xl font-bold text-shadow-white">I'm <span class="text-cyan-500">Irfan
+                    <h4 id="hi" class=" text-xl font-semibold mb-4">Hi,There</h4>
+                    <h1 class="text-5xl md:text-7xl font-bold text-shadow-white">I'm <span id="type" class="text-cyan-500">Irfan
                             Bhati |</span></h1>
-                    <p class="mt-6 text-gray-400 max-w-xl leading-7"> I am web Developer passionate about website.</p>
-                    <p class=" text-gray-400 max-w-xl leading-tight">build modern web applications with a focus on
+                    <p id="p" class="mt-6 text-gray-400 max-w-xl leading-7"> I am web Developer passionate about website.</p>
+                    <p id="p" class=" text-gray-400 max-w-xl leading-tight">build modern web applications with a focus on
                         performance </p>
                     <div class="flex gap-8 mt-2">
-                        <span><a href="https://github.com/Useropsirfan"><img class="h-8 w-8" src="../icon/github.png"
+                        <span id="icon" class="hover:scale-[1.15] hover:shadow-lg hover:shadow-cyan-400 rounded-full"><a href="https://github.com/Useropsirfan"><img class="h-8 w-8" src="../icon/github.png"
                                     alt=""></a></span>
-                        <span><a href="https://www.linkedin.com/in/irfan-bhati-537b12338"><img class="h-8 w-8"
+                        <span id="icon1" class="hover:scale-[1.15] hover:shadow-lg hover:shadow-cyan-400 rounded-full"><a href="https://www.linkedin.com/in/irfan-bhati-537b12338"><img class="h-8 w-8"
                                     src="../icon/linkedin (1).png" alt=""></a></span>
-                        <span><a href="https://www.instagram.com/irfanbhati2007"><img class="h-8 w-8"
+                        <span id="icon2" class="hover:scale-[1.15] hover:shadow-lg hover:shadow-red-500 rounded-full"><a href="https://www.instagram.com/irfanbhati2007"><img class="h-8 w-8"
                                     src="../icon/instagram (1).png" alt=""></a></span>
-                        <span><a href="https://www.facebook.com/share/18wYGE9rQK/"><img class="h-8 w-8"
+                        <span id="icon3" class="hover:scale-[1.15] hover:shadow-lg hover:shadow-cyan-400 rounded-full" ><a href="https://www.facebook.com/share/18wYGE9rQK/"><img class="h-8 w-8"
                                     src="../icon/facebook.png" alt=""></a></span>
                     </div>
                 </div>
-                <div class="mt-6 flex gap-4 ">
+                <div class="mt-6 flex gap-4 " id="btn">
 
-                    <button class="bg-cyan-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-cyan-300 "> Hire
+                    <button id="hire" class="bg-cyan-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-cyan-300 "> Hire
                         Me</button>
 
                 </div>
@@ -118,27 +124,27 @@
         <section id="about" class="min-h-screen flex items-center bg-zinc-900 ">
             <div class="flex  md:item-center gap-6 p-8">
 
-                <div class="mt-2 ">
-                    <img class=" hidden md:block w-60 h-60  bg-zinc-800 rounded-full border-4 border-black shadow-2xl"
+                <div id="aboutimg" class="mt-2 ">
+                    <img class=" hidden md:block max-w-60 h-60  bg-zinc-800 rounded-full border-4 border-black shadow-2xl"
                         src="../images/about2-removebg-preview.png" alt="">
                 </div>
 
                 <div class="max-w-3xl">
-                    <h1 class="uppercase text-4xl font-bold  text-center md:text-left text-cyan-500 mb-4">about me</h1>
-                    <p class="text-gray-400 text-2xl font-semibold leading-6 text-center md:text-left"> I am a
+                    <h1 class="uppercase text-4xl md:text-5xl font-bold  text-center md:text-left text-cyan-500 mb-4">about me</h1>
+                    <p id="abp" class="text-gray-400 text-2xl font-semibold leading-6 text-center md:text-left"> I am a
                         passionate web developer with a
                         strong interest in creating modern, responsive, and user-friendly websites. I enjoy turning
                         ideas into real digital experiences through clean code and creative design. With experience in
                         front-end and back-end development, I work with technologies like HTML, CSS, JavaScript, and
                         popular frameworks to build websites that are both functional and visually appealing.
 
-                        As a developer, I focus on writing efficient code, Ai Intgration solving problems, and
+                        As a developer, I focus on writing efficient code, Ai Integration solving problems, and
                         continuously learning new tools and technologies. I am always excited to take on new challenges,
                         improve my skills, and create web solutions that help businesses and users succeed online.</p>
                     <div class="flex justify-center md:justify-start">
 
-                        <button
-                            class="border-2 border-cyan-500 text-white px-6 py-3 rounded-b-lg hover:bg-cyan-500 hover:text-black font-semibold mt-4">Download
+                        <button id="download"
+                            class="border-2 border-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-500 hover:text-black font-semibold mt-4">Download
                             CV</button>
                     </div>
                 </div>
@@ -151,17 +157,17 @@
 
         <section id="skills" class="bg-zinc-950 py-20 px-4 md:px-8">
             <div class="text-center mb-12">
-                <h1 class="text-5xl font-bold text-cyan-500">
+                <h1 class="text-4xl md:text-5xl font-bold text-cyan-500">
                     <span class="text-white">My</span> Skills
                 </h1>
-                <h2 class="font-semibold text-2xl text-gray-500 mt-4">Improve everyday and try new things</h2>
+                <h2 class="font-semibold md:text-2xl text-gray-500 mt-4">Improve everyday and try new things</h2>
             </div>
             <div class="flex justify-center items-center">
                 <!-- skills cards grid -->
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl w-full place-items-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl w-full place-items-center">
 
                     <!-- Python Card -->
-                    <div
+                    <div id="py"
                         class="p-6 flex flex-col text-white w-full max-w-[20rem] bg-slate-950 rounded-2xl gap-5 shadow-lg shadow-cyan-500/10 border border-cyan-500/20 hover:border-cyan-500/50 hover:shadow-cyan-500/25 hover:scale-[1.03] transition-all duration-300 ease-out shrink-0">
                         <div class="flex gap-4 items-center">
                             <img class="w-16 h-16 border-4 p-2 border-slate-950 shadow-lg bg-slate-900 rounded-2xl object-contain"
@@ -179,7 +185,7 @@
                     </div>
 
                     <!-- Javascript Card -->
-                    <div
+                    <div id="js"
                         class="p-6 flex flex-col text-white w-full max-w-[20rem] bg-slate-950 rounded-2xl gap-5 shadow-lg shadow-cyan-500/10 border border-cyan-500/20 hover:border-cyan-500/50 hover:shadow-cyan-500/25 hover:scale-[1.03] transition-all duration-300 ease-out shrink-0">
                         <div class="flex gap-4 items-center">
                             <img class="w-16 h-16 border-4 p-2 border-slate-950 shadow-lg bg-slate-900 rounded-2xl object-contain"
@@ -188,7 +194,7 @@
                             </h1>
                         </div>
                         <div class="flex justify-between items-center mt-2">
-                            <h1 class="uppercase font-semibold text-xs tracking-wider text-gray-400">intermediate</h1>
+                            <h1 class="uppercase font-semibold text-xs tracking-wider text-gray-400">advanced</h1>
                             <h1 class="font-bold text-yellow-400">85%</h1>
                         </div>
                         <div class="w-full h-3 bg-zinc-900 rounded-full overflow-hidden border border-zinc-800/50">
@@ -198,7 +204,7 @@
                     </div>
 
                     <!-- CSS Card -->
-                    <div
+                    <div id="css"
                         class="p-6 flex flex-col text-white w-full max-w-[20rem] bg-slate-950 rounded-2xl gap-5 shadow-lg shadow-cyan-500/10 border border-cyan-500/20 hover:border-cyan-500/50 hover:shadow-cyan-500/25 hover:scale-[1.03] transition-all duration-300 ease-out shrink-0">
                         <div class="flex gap-4 items-center">
                             <img class="w-16 h-16 border-4 p-2 border-slate-950 shadow-lg bg-slate-900 rounded-2xl object-contain"
@@ -206,7 +212,7 @@
                             <h1 class="uppercase font-bold text-2xl text-start tracking-wide">css</h1>
                         </div>
                         <div class="flex justify-between items-center mt-2">
-                            <h1 class="uppercase font-semibold text-xs tracking-wider text-gray-400">intermediate</h1>
+                            <h1 class="uppercase font-semibold text-xs tracking-wider text-gray-400">advanced</h1>
                             <h1 class="font-bold text-sky-400">95%</h1>
                         </div>
                         <div class="w-full h-3 bg-zinc-900 rounded-full overflow-hidden border border-zinc-800/50">
@@ -216,7 +222,7 @@
                     </div>
 
                     <!-- HTML5 Card -->
-                    <div
+                    <div id="html"
                         class="p-6 flex flex-col text-white w-full max-w-[20rem] bg-slate-950 rounded-2xl gap-5 shadow-lg shadow-cyan-500/10 border border-cyan-500/20 hover:border-cyan-500/50 hover:shadow-cyan-500/25 hover:scale-[1.03] transition-all duration-300 ease-out shrink-0">
                         <div class="flex gap-4 items-center">
                             <img class="w-16 h-16 border-4 p-2 border-slate-950 shadow-lg bg-slate-900 rounded-2xl object-contain"
@@ -224,7 +230,7 @@
                             <h1 class="uppercase font-bold text-2xl text-start tracking-wide">html5</h1>
                         </div>
                         <div class="flex justify-between items-center mt-2">
-                            <h1 class="uppercase font-semibold text-xs tracking-wider text-gray-400">intermediate</h1>
+                            <h1 class="uppercase font-semibold text-xs tracking-wider text-gray-400">expert</h1>
                             <h1 class="font-bold text-orange-400">100%</h1>
                         </div>
                         <div class="w-full h-3 bg-zinc-900 rounded-full overflow-hidden border border-zinc-800/50">
@@ -242,17 +248,17 @@
 
         <section id="projects" class="bg-zinc-900 py-20 px-4 md:px-8">
             <div class="text-center mb-12">
-                <h1 class="text-5xl font-bold text-cyan-500">
+                <h1 class=" text-4xl md:text-5xl font-bold text-cyan-500">
                     <span class="text-white">My</span> Projects
                 </h1>
-                <h2 class="font-semibold text-2xl text-gray-500 mt-4">Improve everyday and try new things</h2>
+                <h2 class="font-semibold md:text-2xl text-gray-500 mt-4">Improve everyday and try new things</h2>
             </div>
             <div class="flex justify-center items-center">
                 <!-- projects responsive grid -->
-                <div class="grid grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl w-full place-items-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl w-full place-items-center">
 
                     <!-- Project Card 1 -->
-                    <div class="w-full max-w-88 h-100 flex flex-col justify-between
+                    <div id="p1" class="w-full max-w-88 h-100 flex flex-col justify-between
                          bg-slate-950 rounded-2xl border border-cyan-500/10 hover:border-cyan-500/30 
                          overflow-hidden shadow-lg shadow-black/50 hover:shadow-cyan-500/10 hover:scale-[1.02] 
                          transition-all duration-300 ease-out shrink-0">
@@ -271,7 +277,7 @@
                                 <button
                                     class="flex-1 bg-cyan-500 uppercase text-black py-2.5 rounded-lg font-bold hover:bg-cyan-400 transition-colors duration-200">
                                     test</button>
-                                <button
+                                <button id="code1"
                                     class="flex-1 border border-cyan-500/30 uppercase text-white py-2.5 rounded-lg font-bold hover:bg-cyan-500/10 transition-colors duration-200">
                                     code </button>
                             </div>
@@ -279,7 +285,7 @@
                     </div>
 
                     <!-- Project Card 2 -->
-                    <div
+                    <div id="p2"
                         class="w-full max-w-88 h-100 flex flex-col justify-between bg-slate-950 rounded-2xl border border-cyan-500/10 hover:border-cyan-500/30 overflow-hidden shadow-lg shadow-black/50 hover:shadow-cyan-500/10 hover:scale-[1.02] transition-all duration-300 ease-out shrink-0">
                         <div class="w-full h-48 overflow-hidden bg-zinc-900">
                             <img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
@@ -295,7 +301,7 @@
                                 <button
                                     class="flex-1 bg-cyan-500 uppercase text-black py-2.5 rounded-lg font-bold hover:bg-cyan-400 transition-colors duration-200">
                                     test</button>
-                                <button
+                                <button id="code2"
                                     class="flex-1 border border-cyan-500/30 uppercase text-white py-2.5 rounded-lg font-bold hover:bg-cyan-500/10 transition-colors duration-200">
                                     code </button>
                             </div>
@@ -303,7 +309,7 @@
                     </div>
 
                     <!-- Project Card 3 -->
-                    <div
+                    <div id="p3"
                         class="w-full max-w-88 h-100 flex flex-col justify-between bg-slate-950 rounded-2xl border border-cyan-500/10 hover:border-cyan-500/30 overflow-hidden shadow-lg shadow-black/50 hover:shadow-cyan-500/10 hover:scale-[1.02] transition-all duration-300 ease-out shrink-0">
                         <div class="w-full h-48 overflow-hidden bg-zinc-900">
                             <img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
@@ -319,7 +325,7 @@
                                 <button
                                     class="flex-1 bg-cyan-500 uppercase text-black py-2.5 rounded-lg font-bold hover:bg-cyan-400 transition-colors duration-200">
                                     test</button>
-                                <button
+                                <button id="code3"
                                     class="flex-1 border border-cyan-500/30 uppercase text-white py-2.5 rounded-lg font-bold hover:bg-cyan-500/10 transition-colors duration-200">
                                     code </button>
                             </div>
@@ -333,23 +339,23 @@
         <!-- contact  section -->
         <section id="contact" class="bg-zinc-950 py-20 px-4 md:px-8">
             <div class="text-center mb-12">
-                <h1 class="text-5xl font-bold text-white">
+                <h1 class="text-4xl md:text-5xl font-bold text-white">
                     <span class="text-cyan-500">Contact</span> Us
                 </h1>
-                <h2 class="font-semibold text-2xl text-gray-500 mt-4">Improve everyday and try new things</h2>
+                <h2 class="font-semibold md:text-2xl text-gray-500 mt-4">Improve everyday and try new things</h2>
             </div>
 
             <div
                 class="flex flex-col lg:flex-row justify-center lg:justify-evenly items-center lg:items-start gap-12 max-w-7xl mx-auto w-full px-4 mt-12">
 
                 <!-- Image container -->
-                <div class="w-full max-w-xs md:max-w-sm lg:max-w-md shrink-0 ">
+                <div id="image" class="w-full max-w-xs md:max-w-sm lg:max-w-md shrink-0 ">
                     <img class=" hidden md:block w-120 h-120  border-b-2 border-black rounded-full shadow-2xl  object-contain"
                         src="../images/contacts.png" alt="Contact Us">
                 </div>
 
                 <!-- Form section -->
-                <div
+                <div id="form"
                     class="w-full max-w-xl bg-slate-900/60 backdrop-blur-md border border-cyan-500/10 shadow-2xl p-8 rounded-2xl text-white">
 
                     <form action="#" class="space-y-6">
@@ -379,12 +385,12 @@
                             <label for="want"
                                 class="block text-sm font-bold tracking-wider text-gray-400 uppercase mb-2">What you
                                 want!</label>
-                            <textarea name="want" id="want" placeholder="Please write here..."
+                            <textarea name="want" id="message" placeholder="Please write here..."
                                 class="w-full h-36 p-4 bg-zinc-900 border border-zinc-800 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 rounded-xl text-white outline-none transition-all placeholder:text-zinc-600 resize-none"></textarea>
                         </div>
 
                         <div class="flex justify-center">
-                            <button type="submit"
+                            <button id="submmit" type="submit"
                                 class="w-full md:w-auto bg-cyan-500 text-black px-8 py-3.5 rounded-xl font-bold uppercase hover:bg-cyan-400 hover:scale-[1.02] shadow-lg shadow-cyan-500/25 active:scale-[0.98] transition-all duration-200 cursor-pointer">
                                 Submit
                             </button>
