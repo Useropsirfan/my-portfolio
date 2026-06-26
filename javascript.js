@@ -143,3 +143,18 @@ sr2.reveal("#form",{origin:"right"})
 // about 
 sr2.reveal("#aboutimg",{origin:"left"})
 sr2.reveal("#abp",{origin:"right"})
+
+const test = document.getElementById("test");
+test.addEventListener('click',()=>{
+    alert("This Under Deployment Sorry !")
+})
+const test1 = document.getElementById("test1");
+test1.addEventListener('click',()=>{
+    alert("This run in terminal !")
+})
+const my = document.getElementById("my");
+my.addEventListener('click',()=>{
+    document.getElementById('home').scrollIntoView({
+        behavior:"smooth"
+    })    
+})
