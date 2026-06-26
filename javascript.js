@@ -3,7 +3,7 @@ const moblieview=document.getElementById("mobliemenu");
 const idpic=document.getElementById("idbtn")
 menubtn.addEventListener("click",()=>{    
     moblieview.classList.toggle("hidden")
-    moblieview.classList.add('flex','flex-col','justify-between')
+    moblieview.classList.add('flex','flex-col',"justify-between","mr-60")
     menubtn.classList.add('absolute', 'top-4' )
     idpic.classList.toggle('hidden')
            
